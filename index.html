@@ -90,9 +90,11 @@
         <input type="text" placeholder="Email" id="user_email">
         <input type="text" placeholder="Телефон" id="user_phone">
         <p>Дата заезда</p>
-        <input type="date" placeholder="Дата заезда" id="user_came" style="width: 90%;">
+        <input type="date" placeholder="Дата заезда" id="user_came" style="width: 90%; -webkit-appearance: textfield;">
+
         <p>Дата выезда</p>
-        <input type="date" placeholder="Дата выезда" id="user_out" style="width: 90%;">
+        <input type="date" placeholder="Дата выезда" id="user_out" style="width: 90%; -webkit-appearance: textfield;">
+
         <div id="error"></div>
         <button id="order">Оформить</button>
     </form>
@@ -133,10 +135,12 @@
             let data ={
                 name: name,
                 email: email,
-                phone: phone
+                phone: phone,
+                datec: datec,
+                dateo: dateo
             }
             tg.sendData(JSON.stringify(data));
-            // tg.close();
+            tg.close();
         });
     </script>
 </body>
