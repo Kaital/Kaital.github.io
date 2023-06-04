@@ -35,11 +35,11 @@
 
         button {
             border: 0;
-            border-radius 5px;
-            margin top: 50 px;
+            border-radius: 5px ;
+            margin-top: 50px;
             height: 60 px;
             width: 200px;
-            font size: 20 px
+            font-size: 20 px;
             font-weight: 500;
             cursor: pointer;
             transition: all 500ms ease;
@@ -91,10 +91,10 @@
         buy.addEventListener("click", ()=> {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " "tg.initDataUnsafe.user.last_name;
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
-        order.addEventListener("click, ()=>{
+        order.addEventListener("click", () => {
             tg.close();
         });
     </script>
