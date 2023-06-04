@@ -70,20 +70,23 @@
         input:focus {
             border-color: #db5d5d;
         }
+        
     </style>
 </head>
 <body>
     <div id="main">
-        <h1>Онлайн магазин</h1>
+        <h1>Гостиница</h1>
         <img src="http://logo-logos.com/2016/10/Marina_Bay_Sands_logo.png">
-        <p>gege</p>
-        <button id="buy">Купить</button>
+        <p></p>
+        <button id="buy">Забронировать</button>
     </div>
     <form id="form">
         <h1>Оформление покупки</h1>
         <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Email" id="user_email">
         <input type="text" placeholder="Телефон" id="user_phone">
+        <input type="date" placeholder="Дата заезда" id="user_came">
+        <input type="date" placeholder="Дата выезда" id="user_out">
         <div id="error"></div>
         <button id="order">Оформить</button>
     </form>
@@ -106,6 +109,8 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
+            let datec = document.getElementById("user_came").value;
+            let dateo = document.getElementById("user_out").value;
             if(name.length<5) {
                 document.getElementById("error").innerText='Ошибка в имени'
                 return;
