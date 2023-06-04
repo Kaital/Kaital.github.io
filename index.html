@@ -105,7 +105,7 @@
 
         <p>Дата выезда</p>
         <input type="date" placeholder="Дата выезда" id="user_out" style="width: 90%;">
-        <select name="select2" class="sergo">
+        <select name="select2" class="sergo" id="amanus">
             <option selected="selected">Выберите класс обслуживания</option>
             <option>Обычный</option>
             <option>Люкс</option>
@@ -136,6 +136,7 @@
             let phone = document.getElementById("user_phone").value;
             let datec = document.getElementById("user_came").value;
             let dateo = document.getElementById("user_out").value;
+            let uroven = document.getElementById("amanus").value; 
             if(name.length<5) {
                 document.getElementById("error").innerText='Ошибка в имени'
                 return;
@@ -154,7 +155,8 @@
                 email: email,
                 phone: phone,
                 datec: datec,
-                dateo: dateo
+                dateo: dateo,
+                uroven: uroven
             }
             tg.sendData(JSON.stringify(data));
             tg.close();
