@@ -73,6 +73,16 @@
         input:focus {
             border-color: #db5d5d;
         }
+
+        .sergo {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
     
         
     </style>
@@ -95,6 +105,12 @@
 
         <p>Дата выезда</p>
         <input type="date" placeholder="Дата выезда" id="user_out" style="width: 90%;">
+        <select name="select2" class="sergo">
+            <option selected="selected">Выберите класс обслуживания</option>
+            <option>Обычный</option>
+            <option>Люкс</option>
+            <option>Президентский</option>
+        </select>
 
         <div id="error"></div>
         <button id="order">Оформить</button>
